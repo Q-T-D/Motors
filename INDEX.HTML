@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BE FORWARD - Used Japanese Cars</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/lucide@latest">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="sticky-top bg-white shadow-sm">
+        <!-- Top bar -->
+        <div class="top-bar text-white py-1">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-none d-md-flex gap-3">
+                        <a href="#" class="text-white text-decoration-none">Customer Support</a>
+                        <a href="#" class="text-white text-decoration-none">Help Center</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center">
+                            <i data-lucide="globe" class="me-1" width="16" height="16"></i>
+                            <span class="me-1">English</span>
+                            <i data-lucide="chevron-down" width="16" height="16"></i>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i data-lucide="user" class="me-1" width="16" height="16"></i>
+                            <span>Login</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main header -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand p-0" href="#">
+                    <div class="logo">
+                        <i data-lucide="car" class="logo-icon" width="32" height="32"></i>
+                        <div class="logo-text">
+                            <span>BE</span>
+                            <span>FORWARD</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mx-auto gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Inventory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">How to Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="Auction.html">Auction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="Register.html">Register</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn p-2 text-secondary">
+                        <i data-lucide="search" width="20" height="20"></i>
+                    </button>
+                    <button class="btn p-2 text-secondary position-relative">
+                        <i data-lucide="shopping-cart" width="20" height="20"></i>
+                        <span class="cart-badge">0</span>
+                    </button>
+                    <button class="btn p-2 text-secondary d-lg-none" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu">
+                        <i data-lucide="menu" width="24" height="24"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <div class="logo">
+                <i data-lucide="car" class="logo-icon" width="24" height="24"></i>
+                <div class="logo-text">
+                    <span>BE</span>
+                    <span>FORWARD</span>
+                </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="mb-3"><a href="#" class="text-dark text-decoration-none">Home</a></li>
+                <li class="mb-3"><a href="#" class="text-dark text-decoration-none">Find Cars</a></li>
+                <li class="mb-3"><a href="#" class="text-dark text-decoration-none">How to Buy</a></li>
+                <li class="mb-3"><a href="#" class="text-dark text-decoration-none">About Us</a></li>
+                <li class="mb-3"><a href="#" class="text-dark text-decoration-none">Contact</a></li>
+                <li class="mb-3"><a href="#" class="text-dark text-decoration-none">Customer Support</a></li>
+                <li class="mb-3"><a href="#" class="text-dark text-decoration-none">Help Center</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+        <div class="container position-relative py-5">
+            <div class="text-center mb-5">
+                <h1 class="display-4 fw-bold mb-4">Find Your Perfect Used Car</h1>
+                <p class="lead mx-auto" style="max-width: 700px;">
+                    Browse through thousands of high-quality used Japanese vehicles at competitive prices.
+                </p>
+            </div>
+
+            <div class="search-form p-4 mx-auto" style="max-width: 900px;">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Make</label>
+                            <select class="form-select">
+                                <option selected>Any Make</option>
+                                <option>Toyota</option>
+                                <option>Honda</option>
+                                <option>Nissan</option>
+                                <option>Mazda</option>
+                                <option>Mitsubishi</option>
+                                <option>Subaru</option>
+                                <option>Suzuki</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Model</label>
+                            <select class="form-select">
+                                <option selected>Any Model</option>
+                                <option>Corolla</option>
+                                <option>Camry</option>
+                                <option>Civic</option>
+                                <option>Accord</option>
+                                <option>Altima</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Year From</label>
+                            <select class="form-select">
+                                <option selected>Any Year</option>
+                                <option>2025</option>
+                                <option>2024</option>
+                                <option>2023</option>
+                                <option>2022</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                                <option>2019</option>
+                                <option>2018</option>
+                                <option>2017</option>
+                                <option>2016</option>
+                                <option>2015</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Year To</label>
+                            <select class="form-select">
+                                <option selected>Any Year</option>
+                                <option>2025</option>
+                                <option>2024</option>
+                                <option>2023</option>
+                                <option>2022</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                                <option>2019</option>
+                                <option>2018</option>
+                                <option>2017</option>
+                                <option>2016</option>
+                                <option>2015</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Price From</label>
+                            <select class="form-select">
+                                <option selected>Any Price</option>
+                                <option>$1,000</option>
+                                <option>$2,000</option>
+                                <option>$3,000</option>
+                                <option>$5,000</option>
+                                <option>$7,000</option>
+                                <option>$10,000</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Price To</label>
+                            <select class="form-select">
+                                <option selected>Any Price</option>
+                                <option>$2,000</option>
+                                <option>$3,000</option>
+                                <option>$5,000</option>
+                                <option>$7,000</option>
+                                <option>$10,000</option>
+                                <option>$15,000</option>
+                                <option>$20,000</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-danger-bf w-100 py-3">
+                            <i data-lucide="search" class="me-2" width="18" height="18"></i>
+                            Search Vehicles
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Vehicles -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="h1 fw-bold">Featured Vehicles</h2>
+                <a href="#" class="text-decoration-none text-primary">View All <i data-lucide="arrow-right" width="16"
+                        height="16"></i></a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Vehicle 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="vehicle-card card h-100 border-0 shadow-sm">
+                        <div class="position-relative" style="height: 200px; overflow: hidden;">
+                            <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="card-img-top h-100 object-fit-cover" alt="Toyota RAV4">
+                            <button class="wishlist-btn">
+                                <i data-lucide="heart" class="wishlist-icon text-secondary" width="16" height="16"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Toyota RAV4</h5>
+                                <h5 class="text-danger mb-0">$14,500</h5>
+                            </div>
+                            <p class="text-muted mb-3">2019</p>
+
+                            <div class="row g-2 mb-3 small">
+                                <div class="col-6">
+                                    <span class="fw-medium">Mileage:</span> 45,000 km
+                                </div>
+                                <div class="col-6">
+                                    <span class="fw-medium">Fuel:</span> Gasoline
+                                </div>
+                                <div class="col-12">
+                                    <span class="fw-medium">Transmission:</span> Automatic
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center text-muted small">
+                                <i data-lucide="map-pin" width="14" height="14" class="me-1"></i>
+                                Tokyo, Japan
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <button class="btn btn-primary-bf w-100">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="vehicle-card card h-100 border-0 shadow-sm">
+                        <div class="position-relative" style="height: 200px; overflow: hidden;">
+                            <img src="https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="card-img-top h-100 object-fit-cover" alt="Honda Civic">
+                            <div class="new-badge">NEW</div>
+                            <button class="wishlist-btn">
+                                <i data-lucide="heart" class="wishlist-icon text-secondary" width="16" height="16"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Honda Civic</h5>
+                                <h5 class="text-danger mb-0">$12,800</h5>
+                            </div>
+                            <p class="text-muted mb-3">2020</p>
+
+                            <div class="row g-2 mb-3 small">
+                                <div class="col-6">
+                                    <span class="fw-medium">Mileage:</span> 30,000 km
+                                </div>
+                                <div class="col-6">
+                                    <span class="fw-medium">Fuel:</span> Gasoline
+                                </div>
+                                <div class="col-12">
+                                    <span class="fw-medium">Transmission:</span> Automatic
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center text-muted small">
+                                <i data-lucide="map-pin" width="14" height="14" class="me-1"></i>
+                                Osaka, Japan
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <button class="btn btn-primary-bf w-100">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="vehicle-card card h-100 border-0 shadow-sm">
+                        <div class="position-relative" style="height: 200px; overflow: hidden;">
+                            <img src="https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="card-img-top h-100 object-fit-cover" alt="Nissan X-Trail">
+                            <button class="wishlist-btn">
+                                <i data-lucide="heart" class="wishlist-icon text-secondary" width="16" height="16"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Nissan X-Trail</h5>
+                                <h5 class="text-danger mb-0">$13,200</h5>
+                            </div>
+                            <p class="text-muted mb-3">2018</p>
+
+                            <div class="row g-2 mb-3 small">
+                                <div class="col-6">
+                                    <span class="fw-medium">Mileage:</span> 52,000 km
+                                </div>
+                                <div class="col-6">
+                                    <span class="fw-medium">Fuel:</span> Diesel
+                                </div>
+                                <div class="col-12">
+                                    <span class="fw-medium">Transmission:</span> Automatic
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center text-muted small">
+                                <i data-lucide="map-pin" width="14" height="14" class="me-1"></i>
+                                Yokohama, Japan
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <button class="btn btn-primary-bf w-100">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="vehicle-card card h-100 border-0 shadow-sm">
+                        <div class="position-relative" style="height: 200px; overflow: hidden;">
+                            <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="card-img-top h-100 object-fit-cover" alt="Mazda CX-5">
+                            <div class="new-badge">NEW</div>
+                            <button class="wishlist-btn">
+                                <i data-lucide="heart" class="wishlist-icon text-secondary" width="16" height="16"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Mazda CX-5</h5>
+                                <h5 class="text-danger mb-0">$19,500</h5>
+                            </div>
+                            <p class="text-muted mb-3">2021</p>
+
+                            <div class="row g-2 mb-3 small">
+                                <div class="col-6">
+                                    <span class="fw-medium">Mileage:</span> 18,000 km
+                                </div>
+                                <div class="col-6">
+                                    <span class="fw-medium">Fuel:</span> Gasoline
+                                </div>
+                                <div class="col-12">
+                                    <span class="fw-medium">Transmission:</span> Automatic
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center text-muted small">
+                                <i data-lucide="map-pin" width="14" height="14" class="me-1"></i>
+                                Tokyo, Japan
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <button class="btn btn-primary-bf w-100">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mt-5 bg-primary bg-opacity-10 rounded-3 p-4 d-flex flex-column flex-md-row align-items-center justify-content-between">
+                <div class="d-flex align-items-start mb-3 mb-md-0">
+                    <i data-lucide="info" width="24" height="24" class="text-primary me-3 flex-shrink-0 mt-1"></i>
+                    <div>
+                        <h3 class="h5 fw-semibold mb-1">Not sure which car to choose?</h3>
+                        <p class="text-muted mb-0">Our experts can help you find the perfect vehicle for your needs.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary-bf px-4 py-3">Get Expert Advice</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Categories -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="h1 fw-bold text-center mb-5">Browse by Vehicle Type</h2>
+
+            <div class="row g-4">
+                <!-- Sedan -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="category-card rounded-3 overflow-hidden position-relative">
+                        <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Sedan">
+                        <div class="position-absolute bottom-0 start-0 end-0 p-4 z-2">
+                            <h3 class="h4 fw-bold text-white mb-1">Sedan</h3>
+                            <p class="text-white-50 small mb-3">1,245 vehicles available</p>
+                            <a href="#"
+                                class="d-inline-flex align-items-center text-white text-decoration-none small fw-medium">
+                                Browse Sedan
+                                <i data-lucide="arrow-right" width="16" height="16" class="ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUV -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="category-card rounded-3 overflow-hidden position-relative">
+                        <img src="https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="SUV">
+                        <div class="position-absolute bottom-0 start-0 end-0 p-4 z-2">
+                            <h3 class="h4 fw-bold text-white mb-1">SUV</h3>
+                            <p class="text-white-50 small mb-3">987 vehicles available</p>
+                            <a href="#"
+                                class="d-inline-flex align-items-center text-white text-decoration-none small fw-medium">
+                                Browse SUV
+                                <i data-lucide="arrow-right" width="16" height="16" class="ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hatchback -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="category-card rounded-3 overflow-hidden position-relative">
+                        <img src="https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Hatchback">
+                        <div class="position-absolute bottom-0 start-0 end-0 p-4 z-2">
+                            <h3 class="h4 fw-bold text-white mb-1">Hatchback</h3>
+                            <p class="text-white-50 small mb-3">764 vehicles available</p>
+                            <a href="#"
+                                class="d-inline-flex align-items-center text-white text-decoration-none small fw-medium">
+                                Browse Hatchback
+                                <i data-lucide="arrow-right" width="16" height="16" class="ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pickup Truck -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="category-card rounded-3 overflow-hidden position-relative">
+                        <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Pickup Truck">
+                        <div class="position-absolute bottom-0 start-0 end-0 p-4 z-2">
+                            <h3 class="h4 fw-bold text-white mb-1">Pickup Truck</h3>
+                            <p class="text-white-50 small mb-3">432 vehicles available</p>
+                            <a href="#"
+                                class="d-inline-flex align-items-center text-white text-decoration-none small fw-medium">
+                                Browse Pickup Truck
+                                <i data-lucide="arrow-right" width="16" height="16" class="ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buying Process -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold mb-4">How to Buy from BE FORWARD</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                    Our simple 4-step process makes buying a quality used Japanese vehicle easy and hassle-free.
+                </p>
+            </div>
+
+            <div class="row position-relative process-steps">
+                <!-- Step 1 -->
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="process-step bg-white rounded-3 shadow-sm p-4 h-100">
+                        <div class="position-absolute top-0 start-50 translate-middle rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
+                            style="width: 32px; height: 32px;">
+                            1
+                        </div>
+                        <div class="text-center mt-5">
+                            <div class="mx-auto rounded-circle bg-blue-100 text-primary d-flex align-items-center justify-content-center mb-4"
+                                style="width: 64px; height: 64px;">
+                                <i data-lucide="search" width="28" height="28"></i>
+                            </div>
+                            <h3 class="h5 fw-semibold mb-3">Find Your Vehicle</h3>
+                            <p class="text-muted">Browse our extensive inventory of used Japanese vehicles and find the
+                                perfect match for your needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="process-step bg-white rounded-3 shadow-sm p-4 h-100">
+                        <div class="position-absolute top-0 start-50 translate-middle rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
+                            style="width: 32px; height: 32px;">
+                            2
+                        </div>
+                        <div class="text-center mt-5">
+                            <div class="mx-auto rounded-circle bg-yellow-100 text-warning d-flex align-items-center justify-content-center mb-4"
+                                style="width: 64px; height: 64px;">
+                                <i data-lucide="credit-card" width="28" height="28"></i>
+                            </div>
+                            <h3 class="h5 fw-semibold mb-3">Purchase & Payment</h3>
+                            <p class="text-muted">Secure your vehicle with our simple payment process. Multiple payment
+                                options available.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <div class="process-step bg-white rounded-3 shadow-sm p-4 h-100">
+                        <div class="position-absolute top-0 start-50 translate-middle rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
+                            style="width: 32px; height: 32px;">
+                            3
+                        </div>
+                        <div class="text-center mt-5">
+                            <div class="mx-auto rounded-circle bg-green-100 text-success d-flex align-items-center justify-content-center mb-4"
+                                style="width: 64px; height: 64px;">
+                                <i data-lucide="ship" width="28" height="28"></i>
+                            </div>
+                            <h3 class="h5 fw-semibold mb-3">Shipping & Delivery</h3>
+                            <p class="text-muted">We arrange shipping to your country with full tracking information
+                                provided.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step bg-white rounded-3 shadow-sm p-4 h-100">
+                        <div class="position-absolute top-0 start-50 translate-middle rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
+                            style="width: 32px; height: 32px;">
+                            4
+                        </div>
+                        <div class="text-center mt-5">
+                            <div class="mx-auto rounded-circle bg-red-100 text-danger d-flex align-items-center justify-content-center mb-4"
+                                style="width: 64px; height: 64px;">
+                                <i data-lucide="car" width="28" height="28"></i>
+                            </div>
+                            <h3 class="h5 fw-semibold mb-3">Receive Your Vehicle</h3>
+                            <p class="text-muted">Complete customs clearance in your country and receive your vehicle at
+                                your specified location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary-bf px-5 py-3">Learn More About Buying Process</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold mb-4">What Our Customers Say</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    We've shipped thousands of quality used vehicles to satisfied customers worldwide.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex mb-4">
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                        </div>
+                        <p class="text-muted mb-4 fst-italic">"I was hesitant about buying a car from overseas, but BE
+                            FORWARD made the process incredibly smooth. The Toyota RAV4 I purchased arrived in perfect
+                            condition, and their customer service was exceptional throughout."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3"
+                                width="48" height="48" alt="Customer photo">
+                            <div>
+                                <strong>James T.</strong>
+                                <p class="text-muted mb-0 small">Los Angeles, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More testimonials (optional) -->
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex mb-4">
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-muted" width="16" height="16"></i>
+                        </div>
+                        <p class="text-muted mb-4 fst-italic">"Very reliable service and the staff was helpful with all
+                            my inquiries. Will definitely buy again."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3"
+                                width="48" height="48" alt="Customer photo">
+                            <div>
+                                <strong>Alice M.</strong>
+                                <p class="text-muted mb-0 small">Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex mb-4">
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                            <i data-lucide="star" class="text-warning fill-warning" width="16" height="16"></i>
+                        </div>
+                        <p class="text-muted mb-4 fst-italic">"Quick delivery and the car was in better shape than I
+                            expected. Thank you BE FORWARD!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/56.jpg" class="rounded-circle me-3"
+                                width="48" height="48" alt="Customer photo">
+                            <div>
+                                <strong>Mohammed S.</strong>
+                                <p class="text-muted mb-0 small">Dubai, UAE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stylish Footer -->
+    <footer class="footer-bf text-white py-5 mt-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <div class="logo d-flex align-items-center mb-3">
+                        <i data-lucide="car" class="logo-icon" width="28" height="28"></i>
+                        <div class="logo-text ms-2">
+                            <span>BE</span>
+                            <span>FORWARD</span>
+                        </div>
+                    </div>
+                    <p class="text-light-emphasis">Your trusted source for high-quality used Japanese vehicles,
+                        delivered globally with confidence.</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-uppercase fw-bold mb-3">Explore</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Find Cars</a></li>
+                        <li><a href="#">How to Buy</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-uppercase fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-uppercase fw-bold mb-3">Subscribe</h6>
+                    <p class="small text-light-emphasis">Get the latest deals and updates straight to your inbox.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control form-control-sm me-2" placeholder="Enter email">
+                        <button class="btn btn-danger-bf btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-light my-4">
+            <div class="text-center small text-light-emphasis">
+                &copy; 2025 BE FORWARD Co., Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
+
+</body>
+
+</html>

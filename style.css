@@ -1,0 +1,680 @@
+:root {
+    --primary-blue: #0056b3;
+    --primary-red: #d81921;
+    --dark-blue: #003d7a;
+    --dark-red: #b50000;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+    background-color: var(--primary-blue);
+    font-size: 0.875rem;
+}
+
+.hero-section {
+    background: linear-gradient(to right, var(--primary-blue), #003d7a);
+    color: white;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.search-form {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary-bf {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.btn-primary-bf:hover {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+.btn-danger-bf {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+.btn-danger-bf:hover {
+    background-color: var(--dark-red);
+    color: white;
+}
+
+.testimonial-card {
+    border-top: 4px solid var(--primary-blue);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card img {
+    transition: transform 0.5s;
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+.category-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.process-step {
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .process-steps::before {
+        content: '';
+        position: absolute;
+        top: 6rem;
+        left: 25%;
+        right: 25%;
+        height: 2px;
+        background-color: #e5e7eb;
+        z-index: 0;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    color: var(--primary-red);
+}
+
+.logo-text {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text span:first-child {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.logo-text span:last-child {
+    color: var(--primary-red);
+    font-weight: bold;
+}
+
+.new-badge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: var(--primary-red);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.wishlist-btn:hover {
+    background-color: white;
+}
+
+.wishlist-btn:hover .wishlist-icon {
+    color: var(--primary-red);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -0.25rem;
+    right: -0.25rem;
+    background-color: var(--primary-red);
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-blue-100 {
+    background-color: #dbeafe;
+}
+
+.bg-yellow-100 {
+    background-color: #fef9c3;
+}
+
+.bg-green-100 {
+    background-color: #dcfce7;
+}
+
+.bg-red-100 {
+    background-color: #fee2e2;
+}
+.footer-bf {
+    background: linear-gradient(to right, var(--primary-blue), var(--dark-blue));
+}
+
+.footer-links a {
+    display: block;
+    color: #d1d5db;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+/* ABOUT PAGE STYLING */
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(to right, var(--primary-blue), var(--dark-blue));
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.about-hero p {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+}
+
+/* Video Section */
+.video-section {
+    padding: 4rem 0;
+}
+
+.video-container iframe {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+}
+
+.about-content h2, .about-content h3 {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.about-content p {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-item {
+    flex: 1 1 200px;
+    background: #fff;
+    border-left: 4px solid var(--primary-blue);
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Bank Section */
+.bank-section {
+    background-color: #ffffff;
+    padding: 4rem 0;
+}
+
+.bank-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.bank-card {
+    flex: 1 1 300px;
+    background-color: #f1f5f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.bank-card i {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.disclaimer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    background: #fff7ed;
+    padding: 1rem;
+    border-left: 4px solid var(--primary-red);
+    border-radius: 0.5rem;
+    color: #92400e;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.benefits-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 2rem;
+}
+
+.benefit-card {
+    background: white;
+    border-left: 4px solid var(--primary-blue);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card i {
+    color: var(--primary-red);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Certification Section */
+.certification {
+    background: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cert-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.cert-logos img {
+    max-height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.cert-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Shared Reuse Classes */
+section .container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/* GENERAL STYLES */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* TESTIMONIALS */
+.testimonials-section {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    border-left: 4px solid var(--primary-red);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #374151;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-author h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--primary-blue);
+}
+
+.testimonial-author span {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* REGISTRATION PAGE STYLES */
+.register-hero {
+    background: linear-gradient(to right, var(--primary-blue), var(--dark-blue));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+    background-size: cover;
+    opacity: 0.15;
+}
+
+/* Animated form card */
+.card {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Gradient border effect */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-red));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+/* Custom toggle buttons */
+.register-toggle {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-blue);
+    background-color: transparent;
+    color: var(--primary-blue);
+}
+
+.register-toggle.active {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.register-toggle:not(.active):hover {
+    background-color: rgba(0, 86, 179, 0.1);
+}
+
+/* Benefits list animation */
+.benefits-list li {
+    position: relative;
+    padding-left: 0;
+    transition: all 0.3s ease;
+}
+
+.benefits-list li::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.benefits-list li:hover {
+    transform: translateX(5px);
+}
+
+.benefits-list li:hover::before {
+    background-color: white;
+    width: 8px;
+    height: 8px;
+}
+
+/* Password strength meter animation */
+.progress-bar {
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+/* Input focus effects */
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.25rem rgba(0, 86, 179, 0.25);
+}
+
+/* Custom checkbox */
+.form-check-input:checked {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .card-body > .row > [class^="col-"] {
+        padding: 1.5rem !important;
+    }
+    
+    .benefits-column {
+        border-top: 4px solid var(--primary-blue);
+        border-left: none !important;
+    }
+}
+
+/* Advanced hover effects for buttons */
+.btn-primary-bf, .btn-danger-bf {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary-bf::before, .btn-danger-bf::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn-primary-bf:hover::before, .btn-danger-bf:hover::before {
+    width: 100%;
+}
+
+/* Custom dropdown in navbar */
+.navbar .dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.navbar .dropdown-item {
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: rgba(0, 86, 179, 0.1);
+    color: var(--primary-blue);
+    padding-left: 1.75rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile menu dropdown */
+.offcanvas-body .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.offcanvas-body .dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #333;
+}
+
+/* Password toggle button */
+.toggle-password {
+    transition: all 0.3s ease;
+}
+
+.toggle-password:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
